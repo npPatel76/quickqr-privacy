@@ -1,37 +1,208 @@
-# Privacy Policy for quickQR
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - quickQR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6C4DFF;
+            --primary-dark: #5532E6;
+            --bg-dark: #0F0E17;
+            --bg-card: #1B1A27;
+            --text-main: #F3F3FA;
+            --text-sub: #A0A0B5;
+            --border: rgba(255, 255, 255, 0.08);
+        }
 
-**Effective Date**: September 27, 2026
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-**quickQR** ("we", "our", or "us") respects your privacy. This Privacy Policy explains how our mobile application handles user information.
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
 
----
+        .header {
+            background: linear-gradient(135deg, #1B1A27 0%, #0F0E17 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 40px 20px;
+            text-align: center;
+        }
 
-### 1. Information Collection & Storage
-- **Offline Local Storage**: All scanned QR codes, product barcodes, and custom generated QR codes are stored locally on your device using an offline database (SQLite). We do NOT transmit, collect, or store your scan history on any external server.
-- **Camera Access**: Camera permission is required solely for real-time scanning of QR codes and product barcodes. Camera data is processed entirely on-device and is never recorded or uploaded.
-- **Photo Gallery Access**: Gallery access is required only when you choose to scan a QR code from an image or export a high-resolution QR code image to your device storage.
+        .badge {
+            display: inline-block;
+            background: rgba(108, 77, 255, 0.15);
+            color: var(--primary);
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 6px 14px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(108, 77, 255, 0.3);
+        }
 
----
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(90deg, #FFFFFF, #A0A0B5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-### 2. Third-Party Services & Advertisements
-**quickQR** uses Google AdMob to serve advertisements. AdMob may collect and process device identifiers, IP addresses, and usage metrics to deliver relevant ad experiences.
+        .header p {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
 
-- **Google AdMob Privacy Policy**: [https://policies.google.com/privacy](https://policies.google.com/privacy)
-- **Google Ad Technologies**: [https://policies.google.com/technologies/ads](https://policies.google.com/technologies/ads)
+        .container {
+            max-width: 800px;
+            margin: 40px auto 0;
+            padding: 0 20px;
+        }
 
----
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
 
-### 3. International Privacy Compliance (GDPR / CCPA)
-- **European Union (GDPR)**: Users have the right to request deletion of any locally stored data simply by clearing the history inside the app settings or uninstalling the app.
-- **California (CCPA)**: We do not sell user personal information to third parties.
+        .card h2 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #FFFFFF;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
----
+        .card h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 18px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
 
-### 4. Children’s Privacy
-**quickQR** does not knowingly collect personal information from children under 13.
+        .card p, .card ul {
+            color: var(--text-sub);
+            font-size: 0.95rem;
+        }
 
----
+        .card ul {
+            list-style: none;
+            margin-top: 12px;
+        }
 
-### 5. Contact Us
-If you have questions regarding this Privacy Policy, please contact us at:
-**Email**: support@quickqr.app
+        .card ul li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #8C70FF;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--text-sub);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 600px) {
+            .header h1 { font-size: 1.8rem; }
+            .card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="badge">quickQR Legal</div>
+        <h1>Privacy Policy</h1>
+        <p>Effective Date: September 27, 2026</p>
+    </header>
+
+    <main class="container">
+        
+        <section class="card">
+            <h2>1. Information Collection & Storage</h2>
+            <p><strong>quickQR</strong> is built with an offline-first architecture to prioritize user privacy and data security.</p>
+            <ul>
+                <li><strong>Offline Local Storage</strong>: All scanned QR codes, product barcodes, and generated QR codes are stored locally on your device using an offline SQLite database. We do NOT collect or store your scan history on any remote server.</li>
+                <li><strong>Camera Access</strong>: Camera permission is used solely for real-time QR code and barcode scanning. Camera video feeds are processed entirely on-device and are never recorded or transmitted.</li>
+                <li><strong>Photo Gallery Access</strong>: Storage access is used only when you choose to scan a QR image from your gallery or export a generated high-resolution QR code image.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>2. Advertising & Third-Party Services</h2>
+            <p>To keep <strong>quickQR</strong> free, we integrate Google AdMob for serving non-intrusive advertisements. AdMob may process device identifiers and performance metrics to deliver relevant ads.</p>
+            <ul>
+                <li>Learn more about <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+                <li>Learn more about <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">Google Advertising Technologies</a></li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>3. Global Privacy Rights (GDPR & CCPA)</h2>
+            <p>We comply with international data protection regulations including European GDPR and California CCPA:</p>
+            <ul>
+                <li><strong>GDPR (European Union)</strong>: You can delete all your stored history data at any time directly in the app settings or by clearing the app data.</li>
+                <li><strong>CCPA (California)</strong>: We do NOT sell or share personal user data with third parties.</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h2>4. Children’s Privacy</h2>
+            <p><strong>quickQR</strong> does not knowingly collect or solicit personal information from children under the age of 13.</p>
+        </section>
+
+        <section class="card">
+            <h2>5. Contact Us</h2>
+            <p>If you have questions or feedback regarding this Privacy Policy, please contact us:</p>
+            <p style="margin-top: 10px;"><strong>Email</strong>: <a href="mailto:navinpatel78699@gmail.com">support@quickqr.app</a></p>
+        </section>
+
+        <footer class="footer">
+            <p>&copy; 2026 quickQR. All rights reserved.</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
